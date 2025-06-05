@@ -1,3 +1,22 @@
+:root {
+    /* Colours */
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-eggplant: hsl(281, 83%, 54%);
+    --clr-purple-100: hsl(275, 100%, 97%);
+    --clr-purple-600: hsl(293, 16%, 49%);
+    --clr-purple-950: hsl(292, 42%, 14%);
+    
+    /* Alphas */
+    --clr-purple-600a2: hsla(293, 16%, 49%, 0.2);
+
+    /* Typography */
+    --ff-base: "Work Sans", sans-serif;
+    --fs-base: 16px;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
 /* CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -23,4 +42,33 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+/* General Styles  */
+body {
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+    line-height: 1;
+
+    color: var(--clr-purple-950);
+    background-color: var(--clr-purple-100);
+
+
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
