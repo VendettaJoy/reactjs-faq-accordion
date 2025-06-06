@@ -4,8 +4,8 @@ const AccordionItem = ({ item, handleToggle }) => {
 			<div
 				className={
 					item.isActive
-						? `accordion-item_header active`
-						: `accordion-item_header`
+						? "accordion-item_header active"
+						: "accordion-item_header"
 				}
 				onClick={() => handleToggle(item.id)}
 			>
@@ -15,9 +15,9 @@ const AccordionItem = ({ item, handleToggle }) => {
 					aria-expanded={item.isActive ? true : false}
 					aria-label="Toggle section"
 				></span>
-            </div>
-            
-			<div className={item.isActive ? "" : `hidden`}>
+			</div>
+
+			<div className="hidden">
 				<div className="accordion-item_content">{item.content}</div>
 			</div>
 		</>
