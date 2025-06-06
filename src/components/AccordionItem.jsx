@@ -1,26 +1,31 @@
-const AccordionItem = ({ item, handleToggle }) => {
+const AccordionItem = ({ index, activeIndex, item, handleToggle }) => {
 	return (
-		<>
-			<div
-				className={
-					item.isActive
-						? "accordion-item_header active"
-						: "accordion-item_header"
-				}
-				onClick={() => handleToggle(item.id)}
+		<div
+			className={`accordion-item ${
+				activeIndex === index ? "active" : ""
+			}`}
+		>
+			<button
+				className="accordion-item_header"
+				onClick={() => handleToggle(index)}
 			>
 				<span className="header">{item.header}</span>
 				<span
-					className="header-btn"
-					aria-expanded={item.isActive ? true : false}
+					className="toggle"
+					aria-expanded={activeIndex === index ? true : false}
 					aria-label="Toggle section"
 				></span>
-			</div>
+			</button>
 
-			<div className="hidden">
-				<div className="accordion-item_content">{item.content}</div>
+			<div
+				// className={`accordion-item_body
+				// 	${activeIndex === index ? "show" : ""}
+                // `}
+                className="accordion-item_body"
+			>
+				<p className="content">{item.content}</p>
 			</div>
-		</>
+		</div>
 	);
 };
 export default AccordionItem;

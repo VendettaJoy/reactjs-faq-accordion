@@ -1,16 +1,13 @@
-.container {
+.wrapper {
     background-color: var(--clr-white);
     margin: 8em 1.5em 0 1.5em;
     padding: 1.5em;
     border-radius: 0.5em;
 }
 
-h1 {
+.title {
     font-size: 2rem;
     margin-bottom: 1em;
-}
-
-.title-container {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -22,7 +19,7 @@ h1 {
     height: 0.75em;
 }
 
-.accordion-container {
+.accordion {
     background-color: var(--clr-white);
 }
 
@@ -36,34 +33,52 @@ h1 {
 }
 
 .accordion-item_header {
+    width: 100%;
+    border: none;
+    outline: 0px solid var(--clr-white);
+    background-color: var(--clr-white);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
-    font-weight: var(--fw-semibold);
-    line-height: 1.1;
+    gap: 1.5em;
 }
 
-.accordion-item_header:hover {
+.header {
+    font-weight: var(--fw-semibold);
+    line-height: 1.1;
+    text-align: left;
+}
+
+.header:hover {
     color: var(--clr-eggplant);
 }
 
-.accordion-item_header .header-btn {
+.toggle {
+    transition: content 0.5s ease-in-out;
+}
+
+.accordion-item .toggle {
     content: url("./assets/images/icon-plus.svg");
 }
 
-.accordion-item_header.active .header-btn {
+.accordion-item.active .toggle {
     content: url("./assets/images/icon-minus.svg");
 }
 
-.hidden {
+.accordion-item_body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
 }
 
-.accordion-item_content {
+.accordion-item.active .accordion-item_body {
+    height: auto;
+    max-height: 300px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.content {
     color: var(--clr-purple-600);
     font-size: 0.9em;
     line-height: 1.25;
