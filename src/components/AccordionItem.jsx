@@ -17,12 +17,7 @@ const AccordionItem = ({ index, activeIndex, item, handleToggle }) => {
 				></span>
 			</button>
 
-			<div
-				// className={`accordion-item_body
-				// 	${activeIndex === index ? "show" : ""}
-                // `}
-                className="accordion-item_body"
-			>
+			<div className="accordion-item_body">
 				<p className="content">{item.content}</p>
 			</div>
 		</div>
