@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Accordion from "./components/Accordion";
 import "./App.css";
 

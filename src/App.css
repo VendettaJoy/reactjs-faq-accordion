@@ -1,12 +1,15 @@
 .wrapper {
+    margin: 0 1.5em;
+    margin-top: clamp(8em, 15vw, 15em);
+    padding: clamp(1.5em, 2vw, 2.5em);
+    border-radius: clamp(0.5em, 2vw, 1em);
+    max-width: 40em;
     background-color: var(--clr-white);
-    margin: 8em 1.5em 0 1.5em;
-    padding: 1.5em;
-    border-radius: 0.5em;
+    box-shadow: 0 5px 20px var(--clr-a-eggplant);
 }
 
 .title {
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     margin-bottom: 1em;
     display: flex;
     align-items: center;
@@ -24,34 +27,37 @@
 }
 
 .accordion-item:not(:first-child) {
-    padding-top: 1em;
+    padding-top: clamp(1em, 2vw, 1.5em);
 }
 
 .accordion-item:not(:last-child) {
-    padding-bottom: 1em;
+    padding-bottom: clamp(1em, 2vw, 1.5em);
     border-bottom: 2px solid var(--clr-purple-100);
 }
 
 .accordion-item_header {
     width: 100%;
-    border: none;
+    border: 0;
     outline: 0px solid var(--clr-white);
     background-color: var(--clr-white);
+    padding: 0;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     cursor: pointer;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.5em;
 }
 
+.accordion-item_header:hover {
+    color: var(--clr-eggplant);
+}
+
 .header {
     font-weight: var(--fw-semibold);
     line-height: 1.1;
     text-align: left;
-}
-
-.header:hover {
-    color: var(--clr-eggplant);
 }
 
 .toggle {
@@ -80,7 +86,14 @@
 
 .content {
     color: var(--clr-purple-600);
-    font-size: 0.9em;
+    font-size: clamp(0.9em, 2vw, 1em);
     line-height: 1.25;
-    padding-top: 1em;
+    padding-top: clamp(1em, 2vw, 1.5em);
+    padding-right: clamp(0em, 2vw, 1.5em);
+}
+
+@media (min-width: 50em) {
+    .title {
+        margin-bottom: 0.5em;
+    }
 }
