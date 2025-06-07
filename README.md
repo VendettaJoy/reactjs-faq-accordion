@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Solution URL here](https://your-solution-url.com)
--   Live Site URL: [Live site URL here](https://your-live-site-url.com)
+-   [Solution URL](https://www.frontendmentor.io/solutions/faq-accordion-using-react-js-hv9-1oTUUZ)
+-   [Live Site URL](https://mellow-sawine-6191fc.netlify.app/)
 
 ## My process
 
