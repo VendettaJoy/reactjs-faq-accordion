@@ -5,7 +5,7 @@
     border-radius: clamp(0.5em, 2vw, 1em);
     max-width: 37.5em;
     background-color: var(--clr-white);
-    box-shadow: 0 5px 20px var(--clr-a-eggplant);
+    box-shadow: 0 40px 35px var(--clr-box-shadow);
 }
 
 .title {

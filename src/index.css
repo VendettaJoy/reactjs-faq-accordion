@@ -7,7 +7,7 @@
     --clr-purple-950: hsl(292, 42%, 14%);
     
     /* Alphas */
-    --clr-a-eggplant: hsla(281, 83%, 54%, 0.15);
+    --clr-box-shadow: hsla(292, 42%, 14%, 0.1);
 
     /* Typography */
     --ff-base: "Work Sans", sans-serif;
